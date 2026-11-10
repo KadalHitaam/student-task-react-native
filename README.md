@@ -2,12 +2,12 @@
 
 ## Identitas Mahasiswa
 
-| Informasi   | Isi                        |
-| ----------- | -------------------------- |
-| Nama        | **[Isi nama]**             |
-| NIM         | **[Isi NIM]**              |
-| Kelas       | **[Isi kelas]**            |
-| Mata Kuliah | **[Isi nama mata kuliah]** |
+| Informasi   | Isi                                  |
+| ----------- | ------------------------------------ |
+| Nama        | **Naufal Alexander**                 |
+| NIM         | **2430511010**                       |
+| Kelas       | **5A**                               |
+| Mata Kuliah | **Pemorgraman Mobile Multiplatform** |
 
 ## Screenshot Aplikasi
 
