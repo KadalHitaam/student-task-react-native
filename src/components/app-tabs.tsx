@@ -1,5 +1,5 @@
-import { NativeTabs } from 'expo-router/native-tabs';
-import { Colors } from '@/constants/theme';
+import { Colors } from "@/constants/theme";
+import { NativeTabs } from "expo-router/native-tabs";
 
 export default function AppTabs() {
   const colors = Colors.light;
@@ -8,15 +8,16 @@ export default function AppTabs() {
     <NativeTabs
       backgroundColor={colors.background}
       indicatorColor={colors.backgroundSelected}
-      iconColor={{ default: colors.textSecondary, selected: '#A98543' }}
+      iconColor={{ default: colors.textSecondary, selected: "#A98543" }}
       labelStyle={{
         default: { color: colors.textSecondary },
-        selected: { color: colors.text, fontWeight: '700' },
-      }}>
+        selected: { color: colors.text, fontWeight: "700" },
+      }}
+    >
       <NativeTabs.Trigger name="index" accessibilityLabel="Sanctuary dashboard">
         <NativeTabs.Trigger.Label>Sanctuary</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon
-          src={require('@/assets/images/tabIcons/home.png')}
+          src={require("@/assets/images/tabIcons/home.png")}
           renderingMode="template"
         />
       </NativeTabs.Trigger>
@@ -24,7 +25,7 @@ export default function AppTabs() {
       <NativeTabs.Trigger name="explore" accessibilityLabel="Project roadmap">
         <NativeTabs.Trigger.Label>Map</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon
-          src={require('@/assets/images/tabIcons/explore.png')}
+          src={require("@/assets/images/tabIcons/explore.png")}
           renderingMode="template"
         />
       </NativeTabs.Trigger>

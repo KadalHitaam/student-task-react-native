@@ -1,23 +1,23 @@
 import {
-  Tabs,
-  TabList,
-  TabTrigger,
-  TabSlot,
-  TabTriggerSlotProps,
-  TabListProps,
-} from 'expo-router/ui';
-import { SymbolView } from 'expo-symbols';
-import { Pressable, View, StyleSheet } from 'react-native';
+    TabList,
+    TabListProps,
+    Tabs,
+    TabSlot,
+    TabTrigger,
+    TabTriggerSlotProps,
+} from "expo-router/ui";
+import { SymbolView } from "expo-symbols";
+import { Pressable, StyleSheet, View } from "react-native";
 
-import { DevFlowPalette } from '@/constants/theme';
+import { DevFlowPalette } from "@/constants/theme";
 
-import { ThemedText } from './themed-text';
-import { ThemedView } from './themed-view';
+import { ThemedText } from "./themed-text";
+import { ThemedView } from "./themed-view";
 
 export default function AppTabs() {
   return (
     <Tabs>
-      <TabSlot style={{ height: '100%' }} />
+      <TabSlot style={{ height: "100%" }} />
       <TabList asChild>
         <CustomTabList>
           <TabTrigger name="home" href="/" asChild>
@@ -32,26 +32,41 @@ export default function AppTabs() {
   );
 }
 
-type TabButtonProps = TabTriggerSlotProps & { icon: 'home' | 'map' };
+type TabButtonProps = TabTriggerSlotProps & { icon: "home" | "map" };
 
-export function TabButton({ children, isFocused, icon, ref: _ref, ...props }: TabButtonProps) {
+export function TabButton({
+  children,
+  isFocused,
+  icon,
+  ref: _ref,
+  ...props
+}: TabButtonProps) {
   const iconName =
-    icon === 'home'
-      ? ({ ios: 'house.fill', android: 'home', web: 'home' } as const)
-      : ({ ios: 'map.fill', android: 'map', web: 'map' } as const);
+    icon === "home"
+      ? ({ ios: "house.fill", android: "home", web: "home" } as const)
+      : ({ ios: "map.fill", android: "map", web: "map" } as const);
 
   return (
-    <Pressable {...props} style={({ pressed }) => pressed ? styles.pressed : undefined}>
+    <Pressable
+      {...props}
+      style={({ pressed }) => (pressed ? styles.pressed : undefined)}
+    >
       <ThemedView
-        type={isFocused ? 'backgroundSelected' : 'backgroundElement'}
-        style={styles.tabButtonView}>
+        type={isFocused ? "backgroundSelected" : "backgroundElement"}
+        style={styles.tabButtonView}
+      >
         <SymbolView
           name={iconName}
-          tintColor={isFocused ? DevFlowPalette.bronze : DevFlowPalette.secondary}
+          tintColor={
+            isFocused ? DevFlowPalette.bronze : DevFlowPalette.secondary
+          }
           size={16}
-          fallback={<ThemedText>{icon === 'home' ? '⌂' : '▤'}</ThemedText>}
+          fallback={<ThemedText>{icon === "home" ? "⌂" : "▤"}</ThemedText>}
         />
-        <ThemedText type="small" themeColor={isFocused ? 'text' : 'textSecondary'}>
+        <ThemedText
+          type="small"
+          themeColor={isFocused ? "text" : "textSecondary"}
+        >
           {children}
         </ThemedText>
       </ThemedView>
@@ -75,13 +90,13 @@ export function CustomTabList(props: TabListProps) {
 
 const styles = StyleSheet.create({
   tabListContainer: {
-    position: 'absolute',
+    position: "absolute",
     bottom: 0,
-    width: '100%',
+    width: "100%",
     padding: 12,
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row',
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
   },
   innerContainer: {
     paddingVertical: 8,
@@ -89,14 +104,14 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     borderWidth: 1,
     borderColor: DevFlowPalette.border,
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     flexGrow: 1,
     gap: 8,
     maxWidth: 760,
   },
   brandText: {
-    marginRight: 'auto',
+    marginRight: "auto",
     color: DevFlowPalette.bronze,
     letterSpacing: 1.2,
   },
@@ -104,8 +119,8 @@ const styles = StyleSheet.create({
     opacity: 0.7,
   },
   tabButtonView: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     gap: 6,
     paddingVertical: 7,
     paddingHorizontal: 10,

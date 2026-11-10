@@ -1,56 +1,50 @@
-# Welcome to your Expo app 👋
+# Student Task — DevFlow
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Identitas Mahasiswa
 
-## Get started
+| Informasi   | Isi                        |
+| ----------- | -------------------------- |
+| Nama        | **[Isi nama]**             |
+| NIM         | **[Isi NIM]**              |
+| Kelas       | **[Isi kelas]**            |
+| Mata Kuliah | **[Isi nama mata kuliah]** |
 
-1. Install dependencies
+## Screenshot Aplikasi
 
-   ```bash
-   npm install
-   ```
+Screenshot aplikasi berikut ditampilkan berdampingan menggunakan gambar yang tersimpan di `src/screenshot/`.
 
-2. Start the app
+<table>
+  <tr>
+    <td align="center"><img src="src/screenshot/screenshot1.jpeg" alt="Screenshot portrait halaman dashboard" width="280" /></td>
+    <td align="center"><img src="src/screenshot/screenshot2.jpeg" alt="Screenshot portrait halaman roadmap" width="280" /></td>
+  </tr>
+  <tr>
+    <td align="center">Dashboard / Sanctuary</td>
+    <td align="center">Project Roadmap / Map</td>
+  </tr>
+</table>
 
-   ```bash
-   npx expo start
-   ```
+## Tentang Aplikasi
 
-In the output, you'll find options to open the app in a
+**DevFlow — Student Task Hub** adalah aplikasi produktivitas untuk membantu mahasiswa, mencatat dan mengelola tugas kuliah maupun proyek. Tugas disajikan sebagai quest dengan tema RPG fantasi. Pengguna dapat menambahkan quest, menandai quest selesai untuk memperoleh XP, menghapus quest, melihat ringkasan progres, dan memantau milestone proyek melalui roadmap.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Data quest disimpan sementara di state aplikasi, bukan di database. Setelah aplikasi dimuat ulang, daftar kembali ke data contoh awal.
 
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Tech Stack
 
-## Get a fresh project
+- **React Native** untuk membangun antarmuka aplikasi lintas platform.
+- **Expo SDK 58** untuk runtime dan tool pengembangan.
+- **Expo Router** untuk navigasi berbasis file dan tab.
+- **TypeScript** untuk tipe data dan pemeriksaan statis.
+- **React Hooks** (`useState`, `useEffect`, dan custom hook `useTaskFilter`) untuk mengelola state serta memfilter quest.
+- **React Native StyleSheet** untuk styling antarmuka.
+- **Expo Symbols** untuk ikon lintas platform.
 
-When you're ready, run:
+## Tips Menjalankan Aplikasi
 
-```bash
-npm run reset-project
-```
+1. Pastikan Node.js versi yang didukung Expo SDK 58 sudah terpasang, lalu jalankan `npm install` dari folder proyek.
+2. Jalankan `npx expo start` untuk membuka development server.
+3. Gunakan QR code dengan Expo Go, atau tekan `w` untuk membuka aplikasi versi web. Untuk Android/iOS, pilih emulator atau perangkat yang tersedia dari development server.
+4. Jika port default sedang dipakai, pilih port lain yang ditawarkan Expo.
 
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
-
-### Other setup steps
-
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Pemeriksaan proyek: `npm run lint` dan `npx tsc --noEmit`.

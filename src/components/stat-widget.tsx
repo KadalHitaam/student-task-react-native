@@ -1,19 +1,19 @@
-import { SymbolView } from 'expo-symbols';
-import { StyleSheet, Text, View } from 'react-native';
+import { SymbolView } from "expo-symbols";
+import { StyleSheet, Text, View } from "react-native";
 
-import { DevFlowPalette } from '@/constants/theme';
+import { DevFlowPalette } from "@/constants/theme";
 
 type StatWidgetProps = {
   label: string;
   value: string | number;
   detail: string;
-  icon: 'gold' | 'xp' | 'quests';
+  icon: "gold" | "xp" | "quests";
 };
 
 const statIcons = {
-  gold: { ios: 'dollarsign.circle', android: 'paid', web: 'paid' },
-  xp: { ios: 'sparkles', android: 'auto_awesome', web: 'auto_awesome' },
-  quests: { ios: 'checkmark.seal', android: 'task_alt', web: 'task_alt' },
+  gold: { ios: "dollarsign.circle", android: "paid", web: "paid" },
+  xp: { ios: "sparkles", android: "auto_awesome", web: "auto_awesome" },
+  quests: { ios: "checkmark.seal", android: "task_alt", web: "task_alt" },
 } as const;
 
 export function StatWidget({ label, value, detail, icon }: StatWidgetProps) {
@@ -48,8 +48,8 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   heading: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     gap: 6,
   },
   fallbackIcon: {
@@ -60,18 +60,18 @@ const styles = StyleSheet.create({
     flexShrink: 1,
     color: DevFlowPalette.secondary,
     fontSize: 10,
-    fontWeight: '700',
+    fontWeight: "700",
     letterSpacing: 0.6,
-    textTransform: 'uppercase',
+    textTransform: "uppercase",
   },
   value: {
     color: DevFlowPalette.ink,
     fontSize: 21,
-    fontWeight: '700',
+    fontWeight: "700",
   },
   detail: {
     color: DevFlowPalette.green,
     fontSize: 10,
-    fontWeight: '600',
+    fontWeight: "600",
   },
 });

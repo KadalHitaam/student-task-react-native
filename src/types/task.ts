@@ -1,4 +1,4 @@
-export type TaskCategory = 'coding' | 'reading' | 'project' | 'study';
+export type TaskCategory = "coding" | "reading" | "project" | "study";
 
 export type Task = {
   id: string;

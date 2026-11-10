@@ -64,7 +64,10 @@ export function TaskItem({ task, onToggle, onDelete }: TaskItemProps) {
         accessibilityRole="button"
         accessibilityLabel={`Hapus quest ${task.title}`}
         onPress={() => onDelete(task.id)}
-        style={({ pressed }) => [styles.deleteAction, pressed && styles.pressed]}
+        style={({ pressed }) => [
+          styles.deleteAction,
+          pressed && styles.pressed,
+        ]}
       >
         <Text style={styles.deleteActionText}>DEL</Text>
       </Pressable>
