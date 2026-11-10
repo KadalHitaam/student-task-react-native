@@ -11,8 +11,6 @@
 
 ## Screenshot Aplikasi
 
-Screenshot aplikasi berikut ditampilkan berdampingan menggunakan gambar yang tersimpan di `src/screenshot/`.
-
 <table>
   <tr>
     <td align="center"><img src="src/screenshot/screenshot1.jpeg" alt="Screenshot portrait halaman dashboard" width="280" /></td>
@@ -26,7 +24,7 @@ Screenshot aplikasi berikut ditampilkan berdampingan menggunakan gambar yang ter
 
 ## Tentang Aplikasi
 
-**DevFlow — Student Task Hub** adalah aplikasi produktivitas untuk membantu mahasiswa, mencatat dan mengelola tugas kuliah maupun proyek. Tugas disajikan sebagai quest dengan tema RPG fantasi. Pengguna dapat menambahkan quest, menandai quest selesai untuk memperoleh XP, menghapus quest, melihat ringkasan progres, dan memantau milestone proyek melalui roadmap.
+**Student Task Hub** adalah aplikasi produktivitas untuk membantu mahasiswa, mencatat dan mengelola tugas kuliah maupun proyek. Tugas disajikan sebagai quest dengan tema RPG fantasi. Pengguna dapat menambahkan quest, menandai quest selesai untuk memperoleh XP, menghapus quest, melihat ringkasan progres, dan memantau milestone proyek melalui roadmap.
 
 Data quest disimpan sementara di state aplikasi, bukan di database. Setelah aplikasi dimuat ulang, daftar kembali ke data contoh awal.
 
