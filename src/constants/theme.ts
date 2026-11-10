@@ -7,20 +7,34 @@ import '@/global.css';
 
 import { Platform } from 'react-native';
 
+export const DevFlowPalette = {
+  background: '#EAE4D3',
+  paper: '#F5F2E6',
+  completedPaper: '#F0EDDF',
+  wash: '#E3DAC9',
+  ink: '#332E28',
+  secondary: '#7A7061',
+  bronze: '#A98543',
+  green: '#5C874A',
+  purple: '#6A4C73',
+  crimson: '#8E353C',
+  border: '#D4CBB6',
+} as const;
+
 export const Colors = {
   light: {
-    text: '#000000',
-    background: '#ffffff',
-    backgroundElement: '#F0F0F3',
-    backgroundSelected: '#E0E1E6',
-    textSecondary: '#60646C',
+    text: DevFlowPalette.ink,
+    background: DevFlowPalette.background,
+    backgroundElement: DevFlowPalette.paper,
+    backgroundSelected: DevFlowPalette.wash,
+    textSecondary: DevFlowPalette.secondary,
   },
   dark: {
-    text: '#ffffff',
-    background: '#000000',
-    backgroundElement: '#212225',
-    backgroundSelected: '#2E3135',
-    textSecondary: '#B0B4BA',
+    text: DevFlowPalette.ink,
+    background: DevFlowPalette.background,
+    backgroundElement: DevFlowPalette.paper,
+    backgroundSelected: DevFlowPalette.wash,
+    textSecondary: DevFlowPalette.secondary,
   },
 } as const;
 
