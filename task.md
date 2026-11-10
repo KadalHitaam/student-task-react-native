@@ -122,7 +122,7 @@ Dokumen ini memecah PRD menjadi checkpoint kecil yang bisa diuji dan dipulihkan 
 
 **Checkpoint pemulihan:** simpan commit implementasi web yang telah lulus; tambah commit validasi native setelah pemeriksaan perangkat/simulator.
 
-## Checkpoint 7 — Tambah dan hapus quest (belum dikerjakan)
+## Checkpoint 7 — Tambah dan hapus quest (selesai)
 
 Checkpoint ini menambahkan hanya fitur Add/Delete yang baru diminta. Jangan mulai checkpoint ini sebelum mendapat instruksi untuk menjalankan pekerjaan. Semua perubahan tetap di state React; jangan menambahkan database atau persistensi.
 
