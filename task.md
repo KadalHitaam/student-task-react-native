@@ -11,8 +11,8 @@ Dokumen ini memecah PRD menjadi checkpoint kecil yang bisa diuji dan dipulihkan 
 
 ## Batasan ruang lingkup — jangan menambah hal yang tidak perlu
 
-- Implementasikan hanya fitur yang disebut PRD: dashboard, statistik, quest, tambah/toggle task, filter aktif/selesai, roadmap, dan navigasi dua tab.
-- Jangan menambahkan backend/API, login, sinkronisasi cloud, notifikasi, kalender, pengaturan, animasi tambahan, atau sistem penyimpanan permanen.
+- Implementasikan hanya fitur yang disebut PRD: dashboard, statistik, quest, tambah/hapus/toggle task, filter aktif/selesai, roadmap, dan navigasi dua tab.
+- Jangan menambahkan backend/API, database, login, sinkronisasi cloud, notifikasi, kalender, pengaturan, animasi tambahan, atau penyimpanan permanen.
 - Jangan menambah dependency jika API/komponen yang sudah tersedia di proyek sudah mencukupi. Hindari mengubah konfigurasi dan file starter yang tidak berkaitan langsung dengan fitur atau validasi.
 - Jangan menambah tab, halaman, jenis statistik, atau aturan gamifikasi baru di luar kebutuhan PRD.
 - Jika ada perubahan di luar batasan ini yang tampak diperlukan, catat sebagai usulan pekerjaan lanjutan; jangan implementasikan tanpa persetujuan.
@@ -121,6 +121,27 @@ Dokumen ini memecah PRD menjadi checkpoint kecil yang bisa diuji dan dipulihkan 
 **Status:** implementasi dan validasi web selesai; checkpoint belum sepenuhnya ditutup sampai uji Android/iOS dilakukan.
 
 **Checkpoint pemulihan:** simpan commit implementasi web yang telah lulus; tambah commit validasi native setelah pemeriksaan perangkat/simulator.
+
+## Checkpoint 7 — Tambah dan hapus quest (belum dikerjakan)
+
+Checkpoint ini menambahkan hanya fitur Add/Delete yang baru diminta. Jangan mulai checkpoint ini sebelum mendapat instruksi untuk menjalankan pekerjaan. Semua perubahan tetap di state React; jangan menambahkan database atau persistensi.
+
+- [x] Tinjau implementasi Add Quest yang ada dan pertahankan desain serta alur yang sudah dikonfirmasi berjalan; jangan membangun ulang bagian lain.
+- [x] Pastikan tombol Add menambah satu quest ke daftar aktif hanya jika judul berisi teks setelah `trim`; pertahankan default kategori, deskripsi, dan XP yang ada tanpa menambah field/form baru.
+- [x] Tambahkan aksi Delete pada setiap `TaskItem` untuk quest aktif maupun selesai.
+- [x] Saat quest dihapus, keluarkan dari state daftar task; jika quest sudah selesai, pastikan XP, jumlah quest selesai, Gold/statistik turunannya mencerminkan task yang tersisa.
+- [x] Pastikan penghapusan quest terakhir menampilkan empty state yang sesuai.
+- [x] Pertahankan penyimpanan dalam memori saja: tidak ada database, backend/API, AsyncStorage, atau mekanisme persistensi lain; reload mengembalikan data mock awal.
+- [x] Uji tambah judul valid, input kosong/spasi, hapus quest aktif, hapus quest selesai, pembaruan XP/statistik, dan empty state.
+- [x] Jalankan `npm run lint` dan `npx tsc --noEmit`, lalu uji alur Add/Delete di web.
+
+**Kriteria lulus:** seluruh acceptance criteria Add/Delete pada PRD terpenuhi; XP/statistik konsisten sesudah penghapusan; tidak ada persistence/database maupun perubahan fitur/desain lain yang tidak diperlukan.
+
+**Validasi:** `npm run lint`, `npx tsc --noEmit`, dan uji manual skenario di atas.
+
+**Status:** selesai. Add/Delete tetap memakai state React lokal; tidak ada database atau persistensi. Uji ulang Add/Delete dan reset data mock setelah reload lulus di web.
+
+**Checkpoint pemulihan:** setelah checkpoint lulus, buat commit terpisah bernama `checkpoint 7: in-memory quest add and delete`. Jika ada kesalahan, pulihkan dari commit terakhir checkpoint yang lulus tanpa membuang pekerjaan lain.
 
 ## Urutan pemulihan cepat
 
